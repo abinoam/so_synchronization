@@ -6,9 +6,9 @@
 #define TRUE 1
 #define N 2 /* number of processes */
 
-int turn;          /* whose turn is it? */
-int interested[N]; /* all values initially 0 (FALSE) */
-int valor = 0; /* shared variable */
+volatile int turn;          /* whose turn is it? */
+volatile int interested[N]; /* all values initially 0 (FALSE) */
+int valor = 0;              /* shared variable */
 
 void enter_region(int process) /* process is 0 or 1 */
 {

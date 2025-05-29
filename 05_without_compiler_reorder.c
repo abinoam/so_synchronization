@@ -29,7 +29,7 @@ void leave_region(int process) /* process: who is leaving */
 void *thread(void *arg)
 {
     int proc = (size_t)arg;
-    size_t i = 1000000;
+    size_t i = 1e8;
     while (i--)
     {
         enter_region(proc);
